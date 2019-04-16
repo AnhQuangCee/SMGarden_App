@@ -2,13 +2,15 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Login from './components/Login';
 import ChooseOptions from './components/ChooseOptions';
+import Automation from './components/Automation';
 
 export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
         {/* <Login/> */}
-        <ChooseOptions/>
+        {/* <ChooseOptions/> */}
+        <Automation/>
       </View>
     );
   }
