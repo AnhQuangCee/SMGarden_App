@@ -9,7 +9,7 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import ProgressCircle from 'react-native-progress-circle';
 import * as Progress from 'react-native-progress';
 
-export default class Automation extends Component {
+export default class ControlsByHands extends Component {
   render() {
     return (
         <View style={styles.container}>
@@ -18,7 +18,7 @@ export default class Automation extends Component {
             </View>
             {/* end header */}
             <View style={styles.displayTitle}>
-                <Text style={styles.automationTitle}>Automation</Text>
+                <Text style={styles.automationTitle}>Controls By Hands</Text>
                 <View style={styles.displayInfo}>
                     <Text style={{fontSize: 18, color:'#155E63'}}>
                         <FontAwesome

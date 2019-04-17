@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import Login from './components/Login';
 import ChooseOptions from './components/ChooseOptions';
 import Automation from './components/Automation';
+import ControlsByHands from './components/ControlsByHands';
 
 export default class App extends React.Component {
   render() {
@@ -10,7 +11,8 @@ export default class App extends React.Component {
       <View style={styles.container}>
         {/* <Login/> */}
         {/* <ChooseOptions/> */}
-        <Automation/>
+        {/* <Automation/> */}
+        <ControlsByHands/>
       </View>
     );
   }
