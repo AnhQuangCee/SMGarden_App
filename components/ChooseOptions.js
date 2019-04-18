@@ -7,6 +7,8 @@ import {View,
         TouchableOpacity,
     } from 'react-native';
 
+import { Actions } from 'react-native-router-flux';
+
 export default class ChooseOptions extends Component {
   render() {
     return (
@@ -18,19 +20,19 @@ export default class ChooseOptions extends Component {
         {/*end header*/}
 
         <View style={styles.bodyCropSelections1}>
-            <TouchableOpacity style={styles.btnImage}>
+            <TouchableOpacity style={styles.btnImage} onPress={()=>Actions.Automation()}>
                 <Image style={styles.Automation} source={require("../assets/images/Automation.png")}></Image>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.btnImage}>
+            <TouchableOpacity style={styles.btnImage} onPress={()=>Actions.ControlsByHands()}>
                 <Image style={styles.Automation} source={require("../assets/images/ControlByHands.png")}></Image>
             </TouchableOpacity>
         </View>
 
         <View style={styles.bodyCropSelections2}>
-            <TouchableOpacity style={styles.btnImage}>
+            <TouchableOpacity style={styles.btnImage} onPress={()=>Actions.Documentation()}>
                 <Image style={styles.Automation} source={require("../assets/images/Documentation.png")}></Image>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.btnImage}>
+            <TouchableOpacity style={styles.btnImage} onPress={()=>Actions.Settings()}>
                 <Image style={styles.Automation} source={require("../assets/images/Settings.png")}></Image>
             </TouchableOpacity>
         </View>
@@ -53,15 +55,16 @@ const styles = StyleSheet.create({
 
     //header
     titleCropSelections:{
-        flex: 3,
+        flex: 2,
         flexDirection:'column',
-        justifyContent:'center',
+        alignItems:'center',
     },
 
     //body
     bodyCropSelections1:{
-        flex: 3,
+        flex: 3.5,
         flexDirection:'row',
+        justifyContent:'center',
     },
     btnImage:{
         flex:1,
@@ -73,7 +76,7 @@ const styles = StyleSheet.create({
         borderRadius: 8,
     },
     bodyCropSelections2:{
-        flex: 3,
+        flex: 3.5,
         flexDirection:'row',
     },
 

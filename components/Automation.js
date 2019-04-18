@@ -4,18 +4,16 @@ import {View,
         StyleSheet,
         Text,
     } from 'react-native';
-    
+
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import ProgressCircle from 'react-native-progress-circle';
 import * as Progress from 'react-native-progress';
+import { Actions } from 'react-native-router-flux';
 
 export default class Automation extends Component {
   render() {
     return (
         <View style={styles.container}>
-            <View style={styles.header}>
-
-            </View>
             {/* end header */}
             <View style={styles.displayTitle}>
                 <Text style={styles.automationTitle}>Automation</Text>
@@ -114,15 +112,10 @@ const styles = StyleSheet.create({
         width:'100%',
         height:'100%',
     },
-    header:{
-        flex: 1,
-        flexDirection:'column',
-        backgroundColor:'orange',
-    },
 
     //Display Infomation
     displayTitle:{
-        flex:5,
+        flex:6,
     },
     automationTitle:{
         fontSize: 30,

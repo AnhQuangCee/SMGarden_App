@@ -13,10 +13,6 @@ export default class ControlsByHands extends Component {
   render() {
     return (
         <View style={styles.container}>
-            <View style={styles.header}>
-
-            </View>
-            {/* end header */}
             <View style={styles.displayTitle}>
                 <Text style={styles.automationTitle}>Controls By Hands</Text>
                 <View style={styles.displayInfo}>
@@ -113,11 +109,6 @@ const styles = StyleSheet.create({
         flexDirection:'column',
         width:'100%',
         height:'100%',
-    },
-    header:{
-        flex: 1,
-        flexDirection:'column',
-        backgroundColor:'orange',
     },
 
     //Display Infomation

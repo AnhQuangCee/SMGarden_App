@@ -6,14 +6,17 @@ import {
     Image,
     ImageBackground,
     TextInput,
-    CheckBox,
     Button,
+    CheckBox,
     TouchableOpacity,
     TouchableWithoutFeedback,
     Alret,
   } from 'react-native';
 
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import { Actions } from 'react-native-router-flux';
+// import Checkox from 'react-native-custom-checkbox';
+
 import { white } from 'ansi-colors';
 export default class Login extends React.Component {
     constructor(props) {
@@ -64,13 +67,13 @@ export default class Login extends React.Component {
                 <TextInput style={styles.textInput} placeholder=" Password" secureTextEntry={true} />
             </View>
             <View style={styles.rememberCheckboxContainer}>
-                <CheckBox checkedColor='white' style={styles.rememberCheckbox} value={this.state.check} onChange={()=>this.CheckBoxTest()}/>
+                <CheckBox style={styles.rememberCheckbox} value={this.state.check} onChange={()=>this.CheckBoxTest()}/>
                 <Text style={styles.rememberText}>Remember password</Text>
             </View>
             {/* end Remember Checkbox*/}
             
             <View style={{flexDirection:'row'}}>
-                <TouchableOpacity style={styles.btnLogin}>
+                <TouchableOpacity style={styles.btnLogin} onPress={()=>Actions.ChooseOptions()}>
                     <Text style={{color:'white', textAlign:'center'}}>Login</Text>
                 </TouchableOpacity>
             </View>
@@ -154,6 +157,8 @@ const styles =StyleSheet.create({
     rememberCheckboxContainer:{
         flexDirection:'row',
         alignItems:'baseline',
+        width:'100%',
+        marginLeft: 40, 
     },
     rememberCheckbox:{
         marginTop: 10,
