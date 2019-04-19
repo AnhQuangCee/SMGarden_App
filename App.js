@@ -5,7 +5,9 @@ import { Router, Scene } from 'react-native-router-flux';
 import Login from './components/Login';
 import ChooseOptions from './components/ChooseOptions';
 import Automation from './components/Automation';
+import Automation2 from './components/Automation2';
 import ControlsByHands from './components/ControlsByHands';
+import ControlsByHands2 from './components/ControlsByHands2';
 
 
 export default class App extends React.Component {
@@ -18,7 +20,7 @@ export default class App extends React.Component {
       //   <ControlsByHands/>
       // </View>
       <Router navigationBarStyle={{ backgroundColor: '#155E63'}} titleStyle={{color:'white'}}>
-        <Scene key="root">
+        <Scene>
           <Scene
             key="Login"
             component={Login}
@@ -34,21 +36,66 @@ export default class App extends React.Component {
             navBarButtonImageColor= '#fff'
           />
           <Scene
+            key="root"
+            tabs
+            tabBarStyle={{ backgroundColor: '#FFFFFF' }}
+            labelStyle={{ fontSize: 16, marginBottom: 15 }}
+            title="Controls By Hands"
+            tintColor= '#fff'
+            navBarTintColor= '#fff'
+            navBarButtonImageColor= '#fff'
+          >
+            {/* Khay A */}
+            <Scene
+                key="ControlsByHands"
+                component={ControlsByHands}
+                title="Khay A"
+                hideNavBar={true}
+              />
+
+            {/* Khay B */}
+            <Scene
+                key="ControlsByHands2"
+                component={ControlsByHands2}
+                title="Khay B"
+                hideNavBar={true}
+              />
+            
+          </Scene>  
+          {/* <Scene
             key="Automation"
             component={Automation}
             title="Automation"
             tintColor= '#fff'
             navBarTintColor= '#fff'
             navBarButtonImageColor= '#fff'
-          />
+          /> */}
           <Scene
-            key="ControlsByHands"
-            component={ControlsByHands}
-            title="ControlsByHands"
+            key="root2"
+            tabs
+            tabBarStyle={{ backgroundColor: '#FFFFFF' }}
+            labelStyle={{ fontSize: 16, marginBottom: 15 }}
+            title="Automation"
             tintColor= '#fff'
             navBarTintColor= '#fff'
             navBarButtonImageColor= '#fff'
-          />
+          >
+            {/* Khay A */}
+            <Scene
+                key="Automation"
+                component={Automation}
+                title="Khay A"
+                hideNavBar={true}
+              />
+
+            {/* Khay B */}
+            <Scene
+                key="Automation2"
+                component={Automation2}
+                title="Khay B"
+                hideNavBar={true}
+              />
+          </Scene>  
         </Scene>
       </Router>
     );

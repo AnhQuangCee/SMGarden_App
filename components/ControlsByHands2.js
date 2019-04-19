@@ -8,19 +8,13 @@ import {View,
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import ProgressCircle from 'react-native-progress-circle';
 import * as Progress from 'react-native-progress';
-import RadioForm, {RadioButton, RadioButtonInput, RadioButtonLabel} from 'react-native-simple-radio-button';
 
-var radio_props = [
-    {label: 'Rau cai', value: 0 },
-    {label: 'Rau mam', value: 1 }
-];
-
-export default class Automation extends Component {
+export default class ControlsByHands2 extends Component {
   render() {
     return (
         <View style={styles.container}>
             <View style={styles.displayTitle}>
-                <Text style={styles.automationTitle}>Automation</Text>
+                <Text style={styles.automationTitle}>Controls By Hands</Text>
                 <View style={styles.displayInfo}>
                     <Text style={{fontSize: 18, color:'#155E63'}}>
                         <FontAwesome
@@ -123,17 +117,6 @@ export default class Automation extends Component {
                         </View>
                     </View>
                     {/* end Setting Title */}
-                    <View style={styles.radioOptions}>
-                        <RadioForm
-                            radio_props={radio_props}
-                            initial={0}
-                            buttonSize={10}
-                            formHorizontal={true}
-                            buttonColor={'#FF7043'}
-                            selectedButtonColor={'#FF7043'}
-                            onPress={(value) => {this.setState({value:value})}}
-                        />
-                    </View>
             </View>
             {/* end Settings */}
         </View>
@@ -209,12 +192,6 @@ const styles = StyleSheet.create({
         paddingTop: 10,
         borderRadius: 3,
         marginTop: 10,
-    },
-    radioOptions:{
-        flex: 1,
-        flexDirection:'row',
-        justifyContent:'center',
-        alignItems:'center',
     },
     //Pull cover
     pullCover:{

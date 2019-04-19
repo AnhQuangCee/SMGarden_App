@@ -68,20 +68,6 @@ export default class ControlsByHands extends Component {
                 {/* end Rain */}
             </View> 
             {/* end Display Informations */}
-            <View style={styles.settings}>
-                    <View style={styles.displayInfo}>
-                        <Text style={{fontSize: 18, color:'#155E63'}}>
-                            <FontAwesome
-                                style={{fontSize:18}}
-                                name='cogs'
-                                color='#155E63'
-                            />
-                            Settings
-                        </Text>
-                    </View>
-                    {/* end Setting Title */}
-            </View>
-            {/* end Settings */}
             <View style={styles.pullCover}>
                 <View style={styles.displayInfo}>
                     <Text style={{fontSize: 18, color:'#155E63'}}>
@@ -98,6 +84,41 @@ export default class ControlsByHands extends Component {
                 </View>
             </View>
             {/* end Pull Cover */}
+
+            <View style={styles.settings}>
+                    <View style={styles.displayInfo}>
+                        <Text style={{fontSize: 18, color:'#155E63'}}>
+                            <FontAwesome
+                                style={{fontSize:18}}
+                                name='cogs'
+                                color='#155E63'
+                            />
+                            Settings
+                        </Text>
+                    </View>
+                    <View style={styles.settingsContainer}>
+                        <View style={styles.harvestTime}>
+                            <Text style={styles.displaySettings}>
+                                Harvest Time
+                            </Text>
+                            <Text style={styles.displaySettingsInfo}>6 Days</Text>
+                        </View>
+                        <View style={styles.soilMoisture}>
+                            <Text style={styles.displaySettings}>
+                                Soil Moisture
+                            </Text>
+                            <Text style={styles.displaySettingsInfo}>990</Text>
+                        </View>
+                        <View style={styles.pumpWater}>
+                            <Text style={styles.displaySettings}>
+                                Pump Water
+                            </Text>
+                            <Text style={styles.displaySettingsInfo}>ON</Text>
+                        </View>
+                    </View>
+                    {/* end Setting Title */}
+            </View>
+            {/* end Settings */}
         </View>
     );
   }
@@ -127,18 +148,54 @@ const styles = StyleSheet.create({
     processBar:{
         flex:9,
         flexDirection: 'row',
+        marginTop: 10,
     },
     rain:{
         flex:1,
+        marginTop: 10,
     },
     //Settings
     settings:{
         flex: 3,
-        backgroundColor:'brown',
+        marginTop: 10,
     },
-    
+    settingsContainer:{
+        flex: 1,
+        flexDirection:'row',
+        justifyContent:'center',
+    },
+    harvestTime:{
+        flex:1,
+        flexDirection:'column',
+        alignItems:'center',
+    },
+    soilMoisture:{
+        flex: 1,
+        flexDirection:'column',
+        alignItems:'center',
+    },
+    pumpWater:{
+        flex: 1,
+        flexDirection:'column',
+        alignItems:'center',
+    },
+    displaySettings:{
+        color:'#0277BD',
+        marginTop: 10,
+    },  
+    displaySettingsInfo:{
+        color:'white',
+        backgroundColor:'#0277BD',
+        height: 40,
+        width: 100,
+        textAlign:'center',
+        paddingTop: 10,
+        borderRadius: 3,
+        marginTop: 10,
+    },
     //Pull cover
     pullCover:{
         flex:1,
+        marginTop: 10,
     }
 });

@@ -15,7 +15,7 @@ var radio_props = [
     {label: 'Rau mam', value: 1 }
 ];
 
-export default class Automation extends Component {
+export default class Automation2 extends Component {
   render() {
     return (
         <View style={styles.container}>
@@ -129,8 +129,8 @@ export default class Automation extends Component {
                             initial={0}
                             buttonSize={10}
                             formHorizontal={true}
-                            buttonColor={'#FF7043'}
-                            selectedButtonColor={'#FF7043'}
+                            buttonColor={'#0277BD'}
+                            selectedButtonColor={'#0277BD'}
                             onPress={(value) => {this.setState({value:value})}}
                         />
                     </View>
