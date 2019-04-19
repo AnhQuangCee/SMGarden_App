@@ -197,12 +197,12 @@ const styles = StyleSheet.create({
         alignItems:'center',
     },
     displaySettings:{
-        color:'#FF7043',
+        color:'#0277BD',
         marginTop: 10,
     },  
     displaySettingsInfo:{
         color:'white',
-        backgroundColor:'#FF7043',
+        backgroundColor:'#0277BD',
         height: 40,
         width: 100,
         textAlign:'center',

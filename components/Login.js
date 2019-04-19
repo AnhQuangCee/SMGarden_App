@@ -110,7 +110,7 @@ export default class Login extends React.Component {
             {/* end inputField */}
 
             <View style={styles.footer}>
-                <Text style={styles.sinupText}>Already have an account?</Text>
+                <Text style={styles.sinupText} onPress={()=> Actions.modal()}>Already have an account?</Text>
             </View>
             {/* end footer */}
         </ImageBackground>

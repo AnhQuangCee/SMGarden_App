@@ -8,17 +8,12 @@ import Automation from './components/Automation';
 import Automation2 from './components/Automation2';
 import ControlsByHands from './components/ControlsByHands';
 import ControlsByHands2 from './components/ControlsByHands2';
+import RegisterModal from './components/RegisterModal';
 
 
 export default class App extends React.Component {
   render() {
     return (
-      // <View style={styles.container}>
-      //   {/* <Login/> */}
-      //   {/* <ChooseOptions/> */}
-      //   {/* <Automation/> */}
-      //   <ControlsByHands/>
-      // </View>
       <Router navigationBarStyle={{ backgroundColor: '#155E63'}} titleStyle={{color:'white'}}>
         <Scene>
           <Scene
@@ -27,6 +22,7 @@ export default class App extends React.Component {
             title="Login"
             hideNavBar={true}
           />
+          {/* end Scene Login */}
           <Scene
             key="ChooseOptions"
             component={ChooseOptions}
@@ -35,6 +31,8 @@ export default class App extends React.Component {
             navBarTintColor= '#fff'
             navBarButtonImageColor= '#fff'
           />
+          {/* end Scene ChooseOptions */}
+
           <Scene
             key="root"
             tabs
@@ -61,15 +59,9 @@ export default class App extends React.Component {
                 hideNavBar={true}
               />
             
-          </Scene>  
-          {/* <Scene
-            key="Automation"
-            component={Automation}
-            title="Automation"
-            tintColor= '#fff'
-            navBarTintColor= '#fff'
-            navBarButtonImageColor= '#fff'
-          /> */}
+          </Scene> 
+          {/* end Scene ControlsByHands  */}
+
           <Scene
             key="root2"
             tabs
@@ -96,6 +88,16 @@ export default class App extends React.Component {
                 hideNavBar={true}
               />
           </Scene>  
+          {/* end Scene Automation */}
+
+          <Scene  
+              key="modal"
+              component={RegisterModal}
+              title="Modal"
+              direction="vertical"
+              hideNavBar
+          />
+          {/* end Scene RegisterModal */}
         </Scene>
       </Router>
     );
