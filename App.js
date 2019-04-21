@@ -9,6 +9,7 @@ import Automation2 from './components/Automation2';
 import ControlsByHands from './components/ControlsByHands';
 import ControlsByHands2 from './components/ControlsByHands2';
 import RegisterModal from './components/RegisterModal';
+import Documentation from './components/Documentation';
 
 
 export default class App extends React.Component {
@@ -98,6 +99,15 @@ export default class App extends React.Component {
               hideNavBar
           />
           {/* end Scene RegisterModal */}
+
+          <Scene
+              key="Documentation"
+              component={Documentation}
+              title="Documentation"
+              tintColor= '#fff'
+              navBarTintColor= '#fff'
+              navBarButtonImageColor= '#fff'
+          />
         </Scene>
       </Router>
     );
