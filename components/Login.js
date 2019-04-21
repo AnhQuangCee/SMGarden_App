@@ -36,13 +36,8 @@ export default class Login extends React.Component {
     return (
         <ImageBackground style={styles.container} source={require("../assets/images/Background.png")}>
             <View style={styles.header}>
-            <FontAwesome
-                style={styles.iconRocket}
-                name="rocket"
-                size={60}
-                color={'white'}
-            />
-            <Text style={styles.textRocket}>Smart Garden</Text>
+                <Image style={styles.logo} source={require("../assets/images/SMGarden_Logo_White.png")}/>
+                <Text style={styles.title}>Smart Garden</Text>
             </View>
             {/* end header */}
 
@@ -131,7 +126,20 @@ const styles =StyleSheet.create({
         flexDirection: 'column',
         justifyContent: 'center',
     },
-
+    title:{
+        flex: 2,
+        fontSize: 20,
+        marginTop: 10,
+        color: 'white',
+        textAlign: 'center',
+    },
+    logo:{
+        flex: 2,
+        width: null,
+        height: null,
+        resizeMode: 'contain',
+        marginTop: 80,
+    },
     //InputField
     inputField: {
         flex: 5,
