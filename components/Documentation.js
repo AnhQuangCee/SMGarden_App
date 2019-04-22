@@ -23,7 +23,7 @@ export default class Documentation extends React.Component{
             <View style={styles.container}>
                 <ImageBackground style={styles.documentBg} source={require("../assets/images/Document_Background.png")}>
                     <View style={styles.title}>
-                        <Text style={{textAlign:'center', fontSize: 20}}>Rau cai</Text>
+                        <Text style={{textAlign:'center', fontSize: 24}}>Rau cai</Text>
                     </View>
                 </ImageBackground>
                 <View style={styles.content}>
@@ -51,15 +51,23 @@ const styles = StyleSheet.create({
         height: null,
         width: null,
         resizeMode: 'cover',
-        backgroundColor:'cyan'
+        backgroundColor:'cyan',
+        position:'relative',
     },
+
     title:{
+        paddingTop: 28,
         backgroundColor:'white',
-        height: 50,
+        height: 80,
         width: 300,
-        justifyContent:'center',
+        position:'absolute',
+        bottom: 0,
+        left: 25,
+        borderTopLeftRadius: 5,
+        borderTopRightRadius: 5,
     },
     content:{
         flex: 7,
+        backgroundColor:'white',
     },
 });
